@@ -1,0 +1,99 @@
+*{font-family: 微软雅黑;margin: 0px;}
+body{
+	background-color: #dedede;
+vertical-align: bottom;}
+
+img{width:250px;height: 250px;}
+
+nav img{width:142px;height: 52px;}
+
+
+li{list-style: none;}
+
+nav{height: 52px;
+	overflow: hidden;
+	background-color: #333333;}
+
+nav ul{
+	display: block;
+     float: right;
+     vertical-align: bottom;
+    list-style-type: disc;
+  }
+
+nav ul li{
+	float: left;
+	padding:15px;
+}	
+
+nav a{display: block;
+	 text-decoration: none;
+      color: #939697;
+      text-align: center;
+}
+
+nav a:hover{color:white;}
+
+section,#submit{background-color: white;
+	    margin:30px;
+	    border-radius: 10px;
+	    box-shadow: 1px 1px 1px #aeaeae;
+	    padding: 20px;
+}
+
+#hx{padding-left:1em;
+	border-left:3px solid gray; }
+h3{color: gray;}
+
+.author{
+	color:#9d9c98;
+	font-size: 10px;
+}
+table {
+  border-collapse: collapse;
+  font-size: 13px;
+  text-align: left;
+  width: 100%;
+}
+table, th, td{
+  padding-left: 10px;
+  border: 1px solid lightslategray;
+}
+table th {
+  background: #333333;
+  color: #ffffff;
+}
+
+#submit label{
+	display: inline-block;
+	width:45%;
+	text-align: right;
+}
+#submit span{
+	margin-left: 45%;
+}
+#submit input, #submit select, #submit textarea {
+  vertical-align: middle;
+  margin-left: -2px;
+  padding: 3px;
+}
+#submit textarea{
+	resize: none;
+}
+
+#submit input[type='submit']{
+	display: block;
+	width:100%;
+	background-color: royalblue;
+	cursor: pointer;
+	border-radius: 5px;
+	text-align: center;
+	border: 1px solid royalblue;
+	color: white;
+	font-size: 16px;
+	height: 2em;
+	margin-top: 10px;
+}
+#submit input[type='submit']:hover{
+   background-color: blue;
+}

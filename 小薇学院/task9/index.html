@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选择图片显示</title>
+	<style type="text/css">
+		#image-previw{
+			width: 500px;
+			height: 500px;
+			border: 1px solid black;
+			background-size: contain;
+			background-repeat: no-repeat;
+		}
+	</style>
+</head>
+<body>
+   <div id="info"></div>
+   <div id="image-previw"></div>
+   <form method="post"  action="" ><input type="file" name="" id="image-file"></form>
+</body>
+</html>
+<script type="text/javascript">
+window.onload=function(){
+	var info=document.getElementById('info');
+	var preview=document.getElementById('image-previw');
+	var fileInput=document.getElementById('image-file');
+
+	fileInput.addEventListener('change',function(){
+		preview.style.backgroundImage = '';
+       if(!fileInput.value){
+          info.innerHTML="没有选择文件";
+          return;
+       }
+       var file=fileInput.files[0];	
+       info.innerHTML="文件:"+file.name+"大小:"+file.size+"修改:"+file.lastModifiedDate;
+       if(file.type!=='image/jpeg'&&file.type!=='image/gif'&&file.type!=='image/png'){
+       	alert('不支持此类型文件上传！');
+       	return;
+       }
+
+       var reader=new FileReader();
+       reader.onload=function(e){
+       	var data=e.target.result;
+       	preview.style.backgroundImage = 'url('+data+')';
+       };
+       reader.readAsDataURL(file);
+
+	})
+};
+
+</script>

@@ -1,0 +1,74 @@
+*{margin: 0;padding: 0;box-sizing: border-box;}
+form{
+	width: 100%;
+	margin-top: 100px;
+	overflow: hidden;
+}
+#input{
+    display: inline-block;
+    width: 180px;
+    height: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+    margin-bottom: 50px;
+	border: 2px solid #ECECEC;
+	border-radius: 3px;
+	font-size: 12px;
+	line-height: 24px;
+	transition: border 0.2s linear;
+	-webkit-transition:border 0.2s linear;
+}
+#input:hover{
+	border:2px solid #f00;
+}
+button{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 10px;
+	display: block;
+	border: 2px solid #f00;
+	border-radius: 3px;
+	width: 100px;
+	height: 30px;
+	font-size: 14px;
+	font-family: 宋体;
+    color: white;
+    background-color: #f00;
+	transition: color 0.1s linear, background 0.1s linear;
+	-webkit-transition:color 0.1s linear, background 0.1s linear;
+}
+button:hover{
+	background-color: white;
+	color: #f00;
+}
+
+#dv-number{
+    display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	position: relative;
+	width: 100%;
+	margin-top: 20px;
+	overflow: hidden;
+}
+.number{
+	display: inline-block;
+	width: 30px;
+	margin-top: 30px;
+	margin-left: 20px;
+	border: 2px solid #f00;
+	border-radius: 3px;
+	font-size: 5px;
+	text-align: center;
+	font-family: 宋体;
+    color: white;
+    background-color: #f00;
+	transition: color 0.1s linear, background 0.1s linear;
+	-webkit-transition:color 0.1s linear, background 0.1s linear
+}
+.number:hover{
+	background-color: white;
+	color: #f00;
+}

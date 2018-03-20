@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task2</title>
+</head>
+<body>
+	<h3>污染城市列表</h3>
+	<label>请输入查询的最低空气质量<input type="text" id="input"></label>
+	<button id="button">确认填写</button>
+	<ul id="aqi-list">
+		
+	</ul>
+</body>
+</html>
+<script type="text/javascript">
+  var aqiData = [
+  ["北京", 90],
+  ["上海", 50],
+  ["福州", 10],
+  ["广州", 50],
+  ["成都", 90],
+  ["西安", 100]
+];
+
+ (function(){
+     
+      var dianji=document.getElementById('button');
+      var luru=document.getElementById('aqi-list');
+      dianji.onclick=function(){
+      	luru.innerHTML=null;
+      	var x=document.getElementById('input');
+      	var min=x.value;
+      	var city=[];
+      	for(var i=0;i<aqiData.length;i++){
+      		if(aqiData[i][1]>=min){
+      			city.push(aqiData[i]);
+      		}
+      	}
+      	city.sort(function(b,a){
+      		return a[1]-b[1];
+      	});
+      	for(var i=0;i<city.length;i++){
+      	var text='第'+(i+1)+'名'+city[i][0]+','+city[i][1];
+        var textnode=document.createTextNode(text);
+        var li=document.createElement('li');
+        li.appendChild(textnode);
+      	luru.appendChild(li);
+      }
+      }       
+ })();
+</script>

@@ -1,0 +1,38 @@
+*{margin: 0;padding: 0;}
+
+/*.main{
+	position: fixed;
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+	top: 50%;
+	left: 50%;
+	margin-top: -100px;
+	margin-left: -200px;	
+}*/
+.main{
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+	width: 400px;
+	height: 200px;
+	background-color: #ccc;
+}
+.left{
+	width:50px;
+	height: 50px;
+	background-color: #fc0;
+	border-radius:  0 0 50px 0;
+}
+.right{
+	width: 50px;
+	height: 50px;
+	background-color: #fc0;
+	border-radius: 50px 0 0 0;
+	position: absolute;
+	right:0;
+	bottom: 0;
+}
